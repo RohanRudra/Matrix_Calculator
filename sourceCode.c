@@ -253,7 +253,7 @@ int main(){
     printf("\t8. Symmetric Matrix check\n");
     printf("\t9. Adjoint of Matrix\n");
     printf("\t10. Exit\n\n");
-    printf("Choice : ");
+    printf("Choice your option: ");
     scanf("%d",&choice);
 
     if(choice==10){
