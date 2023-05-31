@@ -131,9 +131,9 @@ int determinant(int arr[10][10],int n){
 
 
 void adjoint(int arr[10][10],int adj[10][10],int n){
-    if (n == 2) {
-        adj[0][0] = 1;
-    }
+//     if (n == 2) {
+//         adj[0][0] = 1;
+//     }
  
     int sign = 1, temp[10][10];
  
