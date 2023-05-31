@@ -287,7 +287,7 @@ int main(){
     int order;
 
     int choice = 1;
-    while(choice != 10)
+    while(choice != 11)
     {
         printf("\n\n");
         printf("\n*************************************************\n");
@@ -302,11 +302,12 @@ int main(){
         printf("\t7. Transpose of Matrix\n");
         printf("\t8. Symmetric Matrix check\n");
         printf("\t9. Adjoint of Matrix\n");
-        printf("\t10. Exit\n\n");
+        printf("\t10. Rank of Square Matrix\n");
+        printf("\t11. Exit\n\n");
         printf("Choice your option: ");
         scanf("%d",&choice);
 
-        if(choice==10)
+        if(choice==11)
         {
             printf("\n\t\t**** THANK YOU ****\n\n");
 
@@ -484,6 +485,22 @@ int main(){
                 }
                 printf("\n");
             }   
+            break;
+
+            case 10:
+            printf("Enter the order of Matrix:");
+            scanf("%d",&order);
+            rowA=order;
+            colA=order;
+
+            printf("\n\tEnter Elements :\n", rowA, colA);
+            printf("\t----------------\n");
+            inputMatrix(matrixA,rowA,colA);
+            printf("\nMatrix :\n\n");
+            printMatrix(matrixA,rowA,colA);
+
+            printf("Rank of Matrix is %d",rank(matrixA,rowA,colA));
+            printf("\n--------------------");
             break;
 
             
