@@ -20,6 +20,19 @@ This is a simple matrix calculator program that allows you to perform various op
 
 To run this matrix calculator, you need to have any code editor, C-compiler installed on your machine.
 
+## Highlights
+
+- User-friendly interface
+- Matrix operations
+- Error handling
+- Cross-platform compatibility
+
+## Future Scope
+
+- Additional matrix operations
+- Integration with other tools
+- Mobile application
+- Support for complex numbers
 
 ## Examples
 
