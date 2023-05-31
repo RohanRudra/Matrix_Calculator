@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+
 void dimensionSameSize(int *row,int *col){
     printf("Enter the number of Rows : ");
     scanf("%d",&*row);
@@ -32,7 +33,7 @@ void inputMatrix(int arr[10][10],int row,int col){
 void printMatrix(int arr[10][10],int row,int col){
     for(int i=0;i<row;i++){
         for(int j=0;j<col;j++){
-            printf("%d ",arr[i][j]);
+            printf("%d  ",arr[i][j]);
         }
         printf("\n");
     }
@@ -287,12 +288,13 @@ int main(){
     int order;
 
     int choice = 1;
-    while(choice != 11)
-    {
-        printf("\n\n");
-        printf("\n*************************************************\n");
-        printf("\t\tMatrix Calculator");
-        printf("\n*************************************************\n");
+    while(choice != 11){   
+        
+        printf("\n_________________________________________________________");
+        printf("\n");
+        printf("\n    *************************************************\n");
+        printf("\t\t    MATRIX CALCULATOR");
+        printf("\n    *************************************************\n");
         printf("\t1. Add two martices\n");
         printf("\t2. Substract two matrices\n");
         printf("\t3. Scalar multiplication\n");
@@ -417,7 +419,7 @@ int main(){
             printf("\nMatrix :\n\n");
             printMatrix(matrixA,rowA,colA);
 
-            printf("\nThe Determinant of Matrix is %d\n",determinant(matrixA,order));
+            printf("\nThe Determinant of Matrix is %d",determinant(matrixA,order));
             break;
 
 
@@ -438,6 +440,7 @@ int main(){
             inverse(matrixA,order);
             break;
 
+
             case 7:
             dimensionSameSize(&rowA,&colA);
             printf("\n\tEnter Elements :\n", rowA, colA);
@@ -451,6 +454,7 @@ int main(){
             transpose(matrixA,rowA,colA);
             break;
 
+
             case 8:
             dimensionSameSize(&rowA,&colA);
             printf("\n\tEnter Elements :\n", rowA, colA);
@@ -461,6 +465,7 @@ int main(){
 
             matrixCheck(matrixA,rowA,colA);
             break;
+
 
             case 9:
             printf("Enter the order of Matrix:");
@@ -487,6 +492,7 @@ int main(){
             }   
             break;
 
+
             case 10:
             printf("Enter the order of Matrix:");
             scanf("%d",&order);
@@ -503,7 +509,6 @@ int main(){
             printf("\n--------------------");
             break;
 
-            
 
             default:
             printf("\t\tERROR !!\n");
@@ -513,3 +518,6 @@ int main(){
     }
     return 0;
 }
+
+
+
