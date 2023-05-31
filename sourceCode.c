@@ -296,7 +296,7 @@ int main(){
         printf("\t\t    MATRIX CALCULATOR");
         printf("\n    *************************************************\n");
         printf("\t1. Add two martices\n");
-        printf("\t2. Substract two matrices\n");
+        printf("\t2. Subtract two matrices\n");
         printf("\t3. Scalar multiplication\n");
         printf("\t4. Multiply two matrices\n");
         printf("\t5. Determinant of a Matrix\n");
@@ -518,6 +518,3 @@ int main(){
     }
     return 0;
 }
-
-
-
