@@ -182,7 +182,7 @@ void transpose(int arr[10][10],int row,int col){
         }
     }
 
-    printMatrix(ans,row,col);
+    printMatrix(ans,col,row);
 }
 
 void matrixCheck(int arr[10][10],int row,int col){
