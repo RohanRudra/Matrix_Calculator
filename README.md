@@ -1,6 +1,6 @@
 # Matrix Calculator
 
-This is a simple matrix calculator program that allows you to perform various operations on matrices. It's written in [programming language] and can be run on [operating system(s)].
+This is a simple matrix calculator program that allows you to perform various operations on matrices. It's written in C-programming language.
 
 ## Features
 
@@ -15,23 +15,8 @@ This is a simple matrix calculator program that allows you to perform various op
 
 ## Prerequisites
 
-To run this matrix calculator, you need to have [required dependencies] installed on your machine.
+To run this matrix calculator, you need to have any code editor, C-compiler installed on your machine.
 
-## Installation
-
-1. Clone this repository: `git clone [repository URL]`
-2. Navigate to the project directory: `cd matrix-calculator`
-3. [Optional] Create and activate a virtual environment (recommended)
-4. Install the required dependencies: `pip install -r requirements.txt`
-
-## Usage
-
-To use the matrix calculator, follow these steps:
-
-1. Launch the program: `python matrix_calculator.py`
-2. Enter the dimensions of the matrices and their elements as prompted.
-3. Select the operation you want to perform from the menu.
-4. Follow the on-screen instructions to provide input and view the results.
 
 ## Examples
 
