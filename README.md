@@ -13,7 +13,9 @@ This is a simple matrix calculator program that allows you to perform various op
 - Transpose of matrix
 - Symmetric Matrix check
 - Adjoint of Matrix
-<img width="277" alt="Screenshot 2023-05-31 144218" src="https://github.com/RohanRudra/Matrix_Calculator/assets/119700463/1634917b-3ad7-45fc-9bc8-f4274356b013">
+- Rank of Sqaure Matrix
+
+<img width="319" alt="Screenshot 2023-05-31 215530" src="https://github.com/RohanRudra/Matrix_Calculator/assets/119700463/c779ef6e-eff4-473c-85c8-1249c4c2cf50">
 
 
 ## Prerequisites
@@ -39,3 +41,6 @@ To run this matrix calculator, you need to have any code editor, C-compiler inst
 Here are a few examples of using the matrix calculator:
 
 - Addition of two matrices:
+
+<img width="211" alt="Screenshot 2023-05-31 215736" src="https://github.com/RohanRudra/Matrix_Calculator/assets/119700463/505b4afa-0552-4996-98b8-d1cec26c3b35">
+
