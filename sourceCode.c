@@ -228,6 +228,55 @@ void matrixCheck(int arr[10][10],int row,int col){
   
 }
 
+void swap(int matrix[10][10],int r1,int r2, int col){
+    int t;
+    for(int i=0;i<col;i++){
+        t=matrix[r1][i];
+        matrix[r1][i]=matrix[r2][i];
+        matrix[r2][i]=t;
+    }
+
+}
+
+int rank(int a[10][10],int r1, int c1)
+{
+    int i,j,k;
+    float ratio;
+    for(i=0;i<c1;i++)
+    {
+       if(a[i][i]!=0)    /* Diagonal element is not zero */
+     for(j=0;j<r1;j++)
+       if (j!=i)
+       {
+          /* Make all the element above and nelow the current principal
+         diagonal element zero */
+          ratio = a[j][i]/a[i][i];
+          for(k=0;k<c1;k++)
+         a[j][k]-=ratio*a[i][k];
+       }
+       else
+         printf("\n");
+         /* principal Diagonal element is zero */
+       else
+       {
+       for(j=i+1;j<r1;j++)
+          if(a[j][i]!=0)
+          {   /* Find non zero elements in the same column */
+          swap(a,i,j,c1);
+          break;
+          }
+          if(j==r1)
+          {
+          c1--;
+          for(j=0;j<r1;j++)
+             a[j][i] = a[j][c1];
+          }
+          i--;
+         }
+     }
+   return  c1;
+}
+
 
 int main(){
     int matrixA[10][10];
@@ -238,7 +287,7 @@ int main(){
     int order;
 
     int choice = 1;
-    while(choice != 10){
+    while(choice != 11){
     printf("\n\n");
     printf("\n*************************************************\n");
     printf("\t\tMatrix Calculator");
@@ -252,11 +301,12 @@ int main(){
     printf("\t7. Transpose of Matrix\n");
     printf("\t8. Symmetric Matrix check\n");
     printf("\t9. Adjoint of Matrix\n");
-    printf("\t10. Exit\n\n");
+    printf("\t10. Rank of Square Matrix\n");
+    printf("\t11. Exit\n\n");
     printf("Choice : ");
     scanf("%d",&choice);
 
-    if(choice==10){
+    if(choice==11){
         printf("\n\t\t**** THANK YOU ****\n\n");
 
         return 0;
@@ -433,6 +483,22 @@ int main(){
             }
             printf("\n");
         }   
+        break;
+
+        case 10:
+        printf("Enter the order of Matrix:");
+        scanf("%d",&order);
+        rowA=order;
+        colA=order;
+
+        printf("\n\tEnter Elements :\n", rowA, colA);
+        printf("\t----------------\n");
+        inputMatrix(matrixA,rowA,colA);
+        printf("\nMatrix :\n\n");
+        printMatrix(matrixA,rowA,colA);
+
+        printf("Rank of Matrix is %d",rank(matrixA,rowA,colA));
+        printf("\n--------------------");
         break;
 
         default:
