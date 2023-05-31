@@ -9,7 +9,10 @@ This is a simple matrix calculator program that allows you to perform various op
 - Scalar multiplication of matrices
 - Transposition of matrices
 - Determinant calculation
-- Inverse matrix calculation (if applicable)
+- Inverse matrix calculation
+- Transpose of matrix
+- Symmetric Matrix check
+- Adjoint of Matrix
 <img width="277" alt="Screenshot 2023-05-31 144218" src="https://github.com/RohanRudra/Matrix_Calculator/assets/119700463/1634917b-3ad7-45fc-9bc8-f4274356b013">
 
 
