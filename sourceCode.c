@@ -238,208 +238,210 @@ int main(){
     int order;
 
     int choice = 1;
-    while(choice != 10){
-    printf("\n\n");
-    printf("\n*************************************************\n");
-    printf("\t\tMatrix Calculator");
-    printf("\n*************************************************\n");
-    printf("\t1. Add two martices\n");
-    printf("\t2. Substract two matrices\n");
-    printf("\t3. Scalar multiplication\n");
-    printf("\t4. Multiply two matrices\n");
-    printf("\t5. Determinant of a Matrix\n");
-    printf("\t6. Inverse of Matrix\n");
-    printf("\t7. Transpose of Matrix\n");
-    printf("\t8. Symmetric Matrix check\n");
-    printf("\t9. Adjoint of Matrix\n");
-    printf("\t10. Exit\n\n");
-    printf("Choice your option: ");
-    scanf("%d",&choice);
-
-    if(choice==10){
-        printf("\n\t\t**** THANK YOU ****\n\n");
-
-        return 0;
-    }
-
-    switch(choice)
+    while(choice != 10)
     {
-        case 1:
-        dimensionSameSize(&rowA,&colA);
-        rowB = rowA;
-        colB = colA;
+        printf("\n\n");
+        printf("\n*************************************************\n");
+        printf("\t\tMatrix Calculator");
+        printf("\n*************************************************\n");
+        printf("\t1. Add two martices\n");
+        printf("\t2. Substract two matrices\n");
+        printf("\t3. Scalar multiplication\n");
+        printf("\t4. Multiply two matrices\n");
+        printf("\t5. Determinant of a Matrix\n");
+        printf("\t6. Inverse of Matrix\n");
+        printf("\t7. Transpose of Matrix\n");
+        printf("\t8. Symmetric Matrix check\n");
+        printf("\t9. Adjoint of Matrix\n");
+        printf("\t10. Exit\n\n");
+        printf("Choice your option: ");
+        scanf("%d",&choice);
 
-        printf("\n\tEnter elements of Matrix A : \n", rowA, colA);
-        printf("\t----------------------------\n");
-        inputMatrix(matrixA,rowA,colA);
-        printf("\nMatrix A :\n\n");
-        printMatrix(matrixA,rowA,colA);
+        if(choice==10)
+        {
+            printf("\n\t\t**** THANK YOU ****\n\n");
 
-        printf("\n\tEnter elements of Matrix B : \n", rowB, colB);
-        printf("\t----------------------------\n");
-        inputMatrix(matrixB,rowB,colB);
-        printf("\nMatrix B :\n\n");
-        printMatrix(matrixB,rowB,colB);
-
-        printf("\n\tMatrix A + Matrix B :\n");
-        printf("\t-------------------\n\n");
-        matrixAdd(matrixA,matrixB,rowA,colA);
-        break;
-
-
-        case 2:
-        dimensionSameSize(&rowA,&colA);
-        rowB = rowA;
-        colB = colA;
-        
-        printf("\n\tEnter elements of Matrix A : \n", rowA, colA);
-        printf("\t----------------------------\n");
-        inputMatrix(matrixA,rowA,colA);
-        printf("\nMatrix A :\n\n");
-        printMatrix(matrixA,rowA,colA);
-
-        printf("\n\tEnter elements of Matrix B : \n", rowB, colB);
-        printf("\t----------------------------\n");
-        inputMatrix(matrixB,rowB,colB);
-        printf("\nMatrix B :\n\n");
-        printMatrix(matrixB,rowB,colB);
-
-        printf("\n\tMatrixA - MatrixB :\n");
-        printf("\t-------------------\n\n");
-        matrixSubstract(matrixA,matrixB,rowA,colA);
-        break;
-
-
-        case 3:    
-        printf("\nEnter the scalar: ");
-        scanf("%d",&scalar);
-
-        dimensionSameSize(&rowA,&colA);
-        printf("\n\tEnter Elements :\n", rowA, colA);
-        printf("\t----------------\n");
-        inputMatrix(matrixA,rowA,colA);
-        printf("\nMatrix :\n\n");
-        printMatrix(matrixA,rowA,colA);
-
-        printf("\n\tThe Scalar Multiplication %d * Matrix :\n",scalar);
-        printf("\t------------------------------------\n\n");
-        matrixScalarMultiply(matrixA,scalar,rowA,colA);
-        break;
-
-
-        case 4:
-        dimensionDiffSize(&rowA,&colA,&rowB,&colB);
-
-        while (colA != rowB){
-        printf("\nError!!\n");
-        printf("Column of First Matrix not equal to Row of Second Matrix");
-        dimensionDiffSize(&rowA,&colA,&rowB,&colB);
+            return 0;
         }
-        printf("\n\tEnter elements of Matrix A:\n", rowA, colA);
-        printf("\t----------------------------\n");
-        inputMatrix(matrixA,rowA,colA);
-        printf("\nMatrix A :\n\n");
-        printMatrix(matrixA,rowA,colA);
 
-        printf("\n\tEnter elements of Matrix B:\n", rowB, colB);
-        printf("\t----------------------------\n");
-        inputMatrix(matrixB,rowB,colB);
-        printf("\nMatrix B :\n\n");
-        printMatrix(matrixB,rowB,colB);
-        
-        printf("\n\tMatrix A x Matrix B :\n");
-        printf("\t-------------------\n\n");
-        matrixMultiply(matrixA,matrixB,rowA,colA,colB);
-        break;
+        switch(choice)
+        {
+            case 1:
+            dimensionSameSize(&rowA,&colA);
+            rowB = rowA;
+            colB = colA;
 
+            printf("\n\tEnter elements of Matrix A : \n", rowA, colA);
+            printf("\t----------------------------\n");
+            inputMatrix(matrixA,rowA,colA);
+            printf("\nMatrix A :\n\n");
+            printMatrix(matrixA,rowA,colA);
 
-        case 5:
-        printf("Enter the order of Matrix:");
-        scanf("%d",&order);
-        rowA=order;
-        colA=order;
+            printf("\n\tEnter elements of Matrix B : \n", rowB, colB);
+            printf("\t----------------------------\n");
+            inputMatrix(matrixB,rowB,colB);
+            printf("\nMatrix B :\n\n");
+            printMatrix(matrixB,rowB,colB);
 
-        printf("\n\tEnter Elements :\n", rowA, colA);
-        printf("\t----------------\n");
-        inputMatrix(matrixA,rowA,colA);
-        printf("\nMatrix :\n\n");
-        printMatrix(matrixA,rowA,colA);
-
-        printf("\nThe Determinant of Matrix is %d\n",determinant(matrixA,order));
-        break;
+            printf("\n\tMatrix A + Matrix B :\n");
+            printf("\t-------------------\n\n");
+            matrixAdd(matrixA,matrixB,rowA,colA);
+            break;
 
 
-        case 6:
-        printf("Enter the order of Matrix:");
-        scanf("%d",&order);
-        rowA=order;
-        colA=order;
+            case 2:
+            dimensionSameSize(&rowA,&colA);
+            rowB = rowA;
+            colB = colA;
+            
+            printf("\n\tEnter elements of Matrix A : \n", rowA, colA);
+            printf("\t----------------------------\n");
+            inputMatrix(matrixA,rowA,colA);
+            printf("\nMatrix A :\n\n");
+            printMatrix(matrixA,rowA,colA);
 
-        printf("\n\tEnter Elements :\n", rowA, colA);
-        printf("\t----------------\n");
-        inputMatrix(matrixA,rowA,colA);
-        printf("\nMatrix :\n\n");
-        printMatrix(matrixA,rowA,colA);
+            printf("\n\tEnter elements of Matrix B : \n", rowB, colB);
+            printf("\t----------------------------\n");
+            inputMatrix(matrixB,rowB,colB);
+            printf("\nMatrix B :\n\n");
+            printMatrix(matrixB,rowB,colB);
 
-        printf("\n\tInverse of Matrix is :\n\n");
-        printf("\t--------------------\n\n");
-        inverse(matrixA,order);
-        break;
+            printf("\n\tMatrixA - MatrixB :\n");
+            printf("\t-------------------\n\n");
+            matrixSubstract(matrixA,matrixB,rowA,colA);
+            break;
 
-        case 7:
-        dimensionSameSize(&rowA,&colA);
-        printf("\n\tEnter Elements :\n", rowA, colA);
-        printf("\t----------------\n");
-        inputMatrix(matrixA,rowA,colA);
-        printf("\nMatrix :\n\n");
-        printMatrix(matrixA,rowA,colA);
 
-        printf("\n\tTranspose of given Matrix is :\n");
-        printf("\t----------------------------\n\n");
-        transpose(matrixA,rowA,colA);
-        break;
+            case 3:    
+            printf("\nEnter the scalar: ");
+            scanf("%d",&scalar);
 
-        case 8:
-        dimensionSameSize(&rowA,&colA);
-        printf("\n\tEnter Elements :\n", rowA, colA);
-        printf("\t----------------\n");
-        inputMatrix(matrixA,rowA,colA);
-        printf("\nMatrix :\n\n");
-        printMatrix(matrixA,rowA,colA);
+            dimensionSameSize(&rowA,&colA);
+            printf("\n\tEnter Elements :\n", rowA, colA);
+            printf("\t----------------\n");
+            inputMatrix(matrixA,rowA,colA);
+            printf("\nMatrix :\n\n");
+            printMatrix(matrixA,rowA,colA);
 
-        matrixCheck(matrixA,rowA,colA);
-        break;
+            printf("\n\tThe Scalar Multiplication %d * Matrix :\n",scalar);
+            printf("\t------------------------------------\n\n");
+            matrixScalarMultiply(matrixA,scalar,rowA,colA);
+            break;
 
-        case 9:
-        printf("Enter the order of Matrix:");
-        scanf("%d",&order);
-        rowA=order;
-        colA=order;
 
-        printf("\n\tEnter Elements :\n", rowA, colA);
-        printf("\t----------------\n");
-        inputMatrix(matrixA,rowA,colA);
-        printf("\nMatrix :\n\n");
-        printMatrix(matrixA,rowA,colA);
-        
-        int ans[10][10];
-        printf("\n\tAdjoint of given Matrix is :\n");
-        printf("\t----------------------------\n\n");
-        adjoint(matrixA,ans,order);
+            case 4:
+            dimensionDiffSize(&rowA,&colA,&rowB,&colB);
 
-        for(int i=0;i<rowA;i++){
-            for(int j=0;j<colA;j++){
-                printf("%d ",ans[i][j]);
+            while (colA != rowB){
+            printf("\nError!!\n");
+            printf("Column of First Matrix not equal to Row of Second Matrix");
+            dimensionDiffSize(&rowA,&colA,&rowB,&colB);
             }
-            printf("\n");
-        }   
-        break;
+            printf("\n\tEnter elements of Matrix A:\n", rowA, colA);
+            printf("\t----------------------------\n");
+            inputMatrix(matrixA,rowA,colA);
+            printf("\nMatrix A :\n\n");
+            printMatrix(matrixA,rowA,colA);
 
-        default:
-        printf("\t\tERROR !!\n");
-        printf("\tPlease choose between 1 - 7 ");
+            printf("\n\tEnter elements of Matrix B:\n", rowB, colB);
+            printf("\t----------------------------\n");
+            inputMatrix(matrixB,rowB,colB);
+            printf("\nMatrix B :\n\n");
+            printMatrix(matrixB,rowB,colB);
+            
+            printf("\n\tMatrix A x Matrix B :\n");
+            printf("\t-------------------\n\n");
+            matrixMultiply(matrixA,matrixB,rowA,colA,colB);
+            break;
 
+
+            case 5:
+            printf("Enter the order of Matrix:");
+            scanf("%d",&order);
+            rowA=order;
+            colA=order;
+
+            printf("\n\tEnter Elements :\n", rowA, colA);
+            printf("\t----------------\n");
+            inputMatrix(matrixA,rowA,colA);
+            printf("\nMatrix :\n\n");
+            printMatrix(matrixA,rowA,colA);
+
+            printf("\nThe Determinant of Matrix is %d\n",determinant(matrixA,order));
+            break;
+
+
+            case 6:
+            printf("Enter the order of Matrix:");
+            scanf("%d",&order);
+            rowA=order;
+            colA=order;
+
+            printf("\n\tEnter Elements :\n", rowA, colA);
+            printf("\t----------------\n");
+            inputMatrix(matrixA,rowA,colA);
+            printf("\nMatrix :\n\n");
+            printMatrix(matrixA,rowA,colA);
+
+            printf("\n\tInverse of Matrix is :\n\n");
+            printf("\t--------------------\n\n");
+            inverse(matrixA,order);
+            break;
+
+            case 7:
+            dimensionSameSize(&rowA,&colA);
+            printf("\n\tEnter Elements :\n", rowA, colA);
+            printf("\t----------------\n");
+            inputMatrix(matrixA,rowA,colA);
+            printf("\nMatrix :\n\n");
+            printMatrix(matrixA,rowA,colA);
+
+            printf("\n\tTranspose of given Matrix is :\n");
+            printf("\t----------------------------\n\n");
+            transpose(matrixA,rowA,colA);
+            break;
+
+            case 8:
+            dimensionSameSize(&rowA,&colA);
+            printf("\n\tEnter Elements :\n", rowA, colA);
+            printf("\t----------------\n");
+            inputMatrix(matrixA,rowA,colA);
+            printf("\nMatrix :\n\n");
+            printMatrix(matrixA,rowA,colA);
+
+            matrixCheck(matrixA,rowA,colA);
+            break;
+
+            case 9:
+            printf("Enter the order of Matrix:");
+            scanf("%d",&order);
+            rowA=order;
+            colA=order;
+
+            printf("\n\tEnter Elements :\n", rowA, colA);
+            printf("\t----------------\n");
+            inputMatrix(matrixA,rowA,colA);
+            printf("\nMatrix :\n\n");
+            printMatrix(matrixA,rowA,colA);
+            
+            int ans[10][10];
+            printf("\n\tAdjoint of given Matrix is :\n");
+            printf("\t----------------------------\n\n");
+            adjoint(matrixA,ans,order);
+
+            for(int i=0;i<rowA;i++){
+                for(int j=0;j<colA;j++){
+                    printf("%d ",ans[i][j]);
+                }
+                printf("\n");
+            }   
+            break;
+
+            default:
+            printf("\t\tERROR !!\n");
+            printf("\tPlease choose between 1 - 7 ");
+
+        }
     }
- }
- return 0;
+    return 0;
 }
